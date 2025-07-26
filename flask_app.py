@@ -7,7 +7,6 @@ import re
 app = Flask(__name__)
 CORS(app)
 
-# Clean incoming text
 def clean_text(text):
     text = re.sub(r'\bPage\s*\d+\b', '', text, flags=re.IGNORECASE)
     text = re.sub(r'\b\d{1,2}[/\-]\d{1,2}[/\-]\d{2,4}\b', '', text)
